@@ -1,12 +1,78 @@
-# React + Vite
+# Aryamanshu Mishra - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Preview](./src/assets/portfolio-preview.png)
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to my personal portfolio website! This modern, responsive portfolio showcases my skills, projects, and experience as a full-stack developer. Built with React and Vite, it features smooth animations, interactive elements, and a clean design to effectively present my work to potential employers and clients.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Modern UI/UX Design**: Clean, professional interface with attention to detail
+- **Responsive Layout**: Optimized for all devices from mobile to desktop
+- **Interactive Elements**: Engaging animations and transitions using Framer Motion
+- **Dark/Light Mode**: Theme toggle for user preference
+- **Performance Optimized**: Fast loading times and smooth interactions
+- **Project Showcase**: Filterable gallery of my development work
+- **Skills Section**: Visual representation of my technical expertise
+- **Contact Form**: Easy way for visitors to reach out
+
+## 🛠️ Technologies Used
+
+- **Frontend**: React.js, Vite, HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: CSS Modules, Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Deployment**: GitHub Pages
+
+## 🔍 Sections
+
+1. **Hero**: Introduction and brief overview
+2. **About**: Personal background and expertise
+3. **Skills**: Technical skills and proficiencies
+4. **Projects**: Portfolio of my development work
+5. **Education**: Academic background and certifications
+6. **Contact**: Ways to connect with me
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14.0.0 or later)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Aryamanshu/portfolio.git
+
+# Navigate to the project directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+## 🌐 Deployment
+
+This site is deployed using GitHub Pages. The live version can be viewed at: [https://aryamanshu.github.io/portfolio](https://aryamanshu.github.io/portfolio)
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+Feel free to reach out if you have any questions or just want to connect!
+
+- **Email**: aryamanshumishra@gmail.com
+- **LinkedIn**: [linkedin.com/in/aryamanshu-mishra](https://www.linkedin.com/in/aryamanshu-mishra-0ab5ab247/)
+- **GitHub**: [github.com/Aryamanshu](https://github.com/Aryamanshu)
+
+---
+
+© 2024 Aryamanshu Mishra. All Rights Reserved.

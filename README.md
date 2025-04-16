@@ -59,7 +59,7 @@ npm run dev
 
 ## 🌐 Deployment
 
-This site is deployed using GitHub Pages. The live version can be viewed at: [https://aryamanshu.github.io/portfolio](https://aryamanshu.github.io/portfolio)
+This site is deployed using GitHub Pages. The live version can be viewed at: [https://aryamanshu.github.io/portfolio](https://portfolio-aryamanshu.netlify.app/)
 
 ## 📝 License
 
@@ -71,7 +71,7 @@ Feel free to reach out if you have any questions or just want to connect!
 
 - **Email**: aryamanshumishra@gmail.com
 - **LinkedIn**: [linkedin.com/in/aryamanshu-mishra](https://www.linkedin.com/in/aryamanshu-mishra-0ab5ab247/)
-- **GitHub**: [github.com/Aryamanshu](portfolio-aryamanshu.netlify.app)
+- **GitHub**: [github.com/Aryamanshu](https://github.com/Aryamanshu)
 
 ---
 

@@ -1,0 +1,74 @@
+[
+  {
+    "institution": "KIIT University",
+    "degree": "B-Tech in Information Technology",
+    "location": "Bhubaneswar, Odisha",
+    "startDate": "Sep 2020",
+    "endDate": "sep 2024",
+    "cgpa": "9.2/10.0",
+    "imageSrc": "history/university.svg",
+    "achievements": [
+      "Received Dean's List for Academic Excellence for 3 consecutive years",
+      "Completed advanced coursework in Data Structures, Algorithms, and Web Development",
+      "Participated in hackathons and coding competitions, winning several awards"
+
+    ]
+  },
+  {
+    "institution": "Prabhat Senior Secondary Public School",
+    "degree": "Intermediate",
+    "location": "kanpur, Uttar Pradesh",
+    "startDate": "March 2019",
+    "endDate": "May 2020",
+    "percentage": "80%",
+    "imageSrc": "history/highschool.svg",
+    "achievements": [
+      "Graduated with honors",
+      "President of Computer Science Club",
+      "Participated in national mathematics competition"
+    ]
+  },
+  {
+    "institution": "Prabhat Senior Secondary Public School",
+    "degree": "High School",
+    "location": "kanpur, Uttar Pradesh",
+    "startDate": "March 2017",
+    "endDate": "May 2018",
+    "cgpa": "9.6/10.0",
+    "imageSrc": "history/highschool.svg",
+    "achievements": [
+      "Achieved top rank in class",
+      "Won first prize in school science fair",
+      "Participated in district-level quiz competition"
+    ]
+  },
+  {
+    "institution": "UDEMY",
+    "degree": "Full Stack Web Development Certification",
+    "location": "Online",
+    "startDate": "Jan 2023",
+    "endDate": "Jun 2023",
+    "imageSrc": "history/online-course.svg",
+    "certificateLink": "https://udemy-certificate.s3.amazonaws.com/image/UC-d2f8f778-a07b-4ff1-8bea-4fc7b658a2d6.jpg",
+    "achievements": [
+      "Completed 300+ hours of coursework and hands-on projects",
+      "Built 3 full-stack applications using MERN stack",
+      "Received certification with distinction"
+    ]
+  },
+  {
+    "institution": "UDEMY",
+    "degree": "Prompt Engineering Certification",
+    "location": "Online",
+    "startDate": "May 2023",
+    "endDate": "Nov 2023",
+    "imageSrc": "history/online-course.svg",
+    "certificateLink": "https://udemy-certificate.s3.amazonaws.com/image/UC-d433e16b-2ab4-4741-8026-48bf66fb000d.jpg",
+    "achievements": [
+      "Completed 300+ hours of coursework and hands-on projects",
+      "Built 3 full-stack applications using MERN stack",
+      "Received certification with distinction"
+    ]
+  }
+
+]

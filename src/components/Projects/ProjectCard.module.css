@@ -1,0 +1,284 @@
+@import "../../vars.css";
+
+.card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(11, 36, 71, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  will-change: transform, box-shadow;
+}
+
+/* Special styling for showcase view */
+.showcaseCard {
+  height: 100%;
+  border-radius: 1.5rem;
+  background: rgba(11, 36, 71, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+}
+
+.card:hover::after {
+  transform: translateX(100%);
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.showcaseCard .imageContainer {
+  height: 240px;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 21, 45, 0.85) 0%, rgba(4, 21, 45, 0) 70%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover .links {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+}
+
+.link:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-secondary);
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.showcaseCard .content {
+  padding: 1.75rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+  position: relative;
+  display: inline-block;
+}
+
+.showcaseCard .title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.card:hover .title::before {
+  width: 100%;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.showcaseCard .skills {
+  gap: 0.75rem;
+}
+
+.skill {
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: rgba(87, 108, 188, 0.1);
+  color: var(--color-primary);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  will-change: transform;
+}
+
+.showcaseCard .skill {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  background-color: rgba(87, 108, 188, 0.15);
+  border-radius: 0.3rem;
+}
+
+.skill:hover {
+  background-color: rgba(87, 108, 188, 0.2);
+  transform: translateY(-2px);
+}
+
+.mobileLinks {
+  display: none;
+  padding: 0.75rem 1.5rem;
+  justify-content: space-between;
+  border-top: 1px solid rgba(87, 108, 188, 0.1);
+  background-color: rgba(11, 36, 71, 0.4);
+}
+
+.mobileLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mobileLink:hover {
+  color: var(--color-secondary);
+  transform: translateX(2px);
+}
+
+@media screen and (max-width: 1024px) {
+  .card:hover {
+    transform: translateY(-6px);
+  }
+
+  .imageContainer {
+    height: 180px;
+  }
+
+  .content {
+    padding: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobileLinks {
+    display: flex;
+  }
+
+  .imageContainer {
+    height: 170px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .imageContainer {
+    height: 150px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .skill {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .mobileLinks {
+    padding: 0.6rem 1rem;
+  }
+
+  .mobileLink {
+    font-size: 0.8rem;
+  }
+}

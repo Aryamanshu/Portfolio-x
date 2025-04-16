@@ -1,0 +1,20 @@
+[
+  {
+    "name": "John Smith",
+    "role": "CTO at TechCorp",
+    "image": "testimonials/person1.jpg",
+    "text": "Aryamanshu is an exceptional developer who delivered our project on time and with outstanding quality. His attention to detail and problem-solving skills are impressive."
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "Product Manager at InnovateTech",
+    "image": "testimonials/person2.jpg",
+    "text": "Working with Aryamanshu was a pleasure. He understood our requirements perfectly and implemented features that exceeded our expectations."
+  },
+  {
+    "name": "Michael Chen",
+    "role": "Founder of StartupX",
+    "image": "testimonials/person3.jpg",
+    "text": "Aryamanshu helped us transform our idea into a fully functional web application. His technical expertise and communication skills made the process smooth and efficient."
+  }
+]

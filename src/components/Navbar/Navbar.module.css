@@ -1,0 +1,167 @@
+@import "../../vars.css";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 10%;
+  z-index: 100;
+  background-color: rgba(4, 21, 45, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all var(--transition-normal);
+}
+
+.navbar.scrolled {
+  padding: 1rem 10%;
+  background-color: rgba(4, 21, 45, 0.95);
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  background: linear-gradient(90deg, var(--color-text) 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.title:hover {
+  transform: scale(1.05);
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.menuBtn:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.menuItems li {
+  position: relative;
+}
+
+.menuItems a {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  padding: 0.5rem 0;
+}
+
+.menuItems a:hover {
+  color: var(--color-primary);
+}
+
+.menuItems a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-normal);
+}
+
+.menuItems a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .menuBtn {
+    display: block;
+    z-index: 101;
+  }
+
+  .menuItems {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: linear-gradient(
+      135deg,
+      var(--color-dark) 0%,
+      var(--color-secondary) 100%
+    );
+    padding: 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    z-index: 100;
+  }
+
+  .menuItems a {
+    font-size: 1.25rem;
+  }
+
+  .menuItems a::after {
+    display: none;
+  }
+
+  .menuOpen {
+    transform: translateX(0);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+    z-index: 99;
+  }
+
+  .overlayActive {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

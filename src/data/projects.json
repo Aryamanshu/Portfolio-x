@@ -1,0 +1,57 @@
+[
+    
+    {
+      "id": 1,
+      "title": "AI-Image-Generator",
+      "imageSrc": "projects/ai.png",
+      "description": "A web application that generates images based on user input using the stability-ai API.",
+      "skills": ["React", "Node.js", "Express", "MongoDB", "Stability AI API"],
+      "demo": "https://arya-ai-image-generator.netlify.app/",
+      "source": "https://github.com/Aryamanshu/AI-Image-Generator"
+    },
+    {
+      "id": 2,
+      "title": "fitness-Webapp",
+      "imageSrc": "projects/fit.png",
+      "description": "A web application that provides real-time fitness data, historical data, and interactive maps using the OpenWeatherMap API.",
+      "skills": ["JavaScript", "React", "API Integration", "CSS", "Node.js", "Express", "MongoDB"],
+      "demo": "https://fitness-by-arya.netlify.app/",
+      "source": "https://github.com/Aryamanshu/fitness-app"
+    },
+    {
+      "id": 3,
+      "title": "Employee Management System",
+      "imageSrc": "projects/ems.png",
+      "description": "A full-stack task management application with user authentication, task categorization, and deadline reminders.",
+      "skills": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "demo": "https://ems-by-aryamanshu.netlify.app/",
+      "source": "https://github.com/Aryamanshu/Employee-Management-System-EMS-"
+    },
+    {
+      "id": 4,
+      "title": "Personal Portfolio Website",
+      "imageSrc": "projects/portfolio.png",
+      "description": "A modern, responsive portfolio website built with React and Framer Motion to showcase my projects and skills.",
+      "skills": ["React", "Framer Motion", "CSS Modules", "Vite"],
+      "demo": "https://aryamanshu.netlify.app/",
+      "source": "https://github.com/Aryamanshu/aryamanshu.github.io"
+    },
+    {
+      "id": 5,
+      "title": "DOCS WebApp",
+      "imageSrc": "projects/docs.png",
+      "description": "A web application that provides documentation for the Framer Motion library.",
+      "skills": ["React", "Node.js", "MongoDB", "Framer Motion", "Express"],
+      "demo": "https://framer-docs-aryamanshu.netlify.app/",
+      "source": "https://github.com/Aryamanshu/framer-docs"
+    },
+    {
+      "id": 6,
+      "title": "recipe-app",
+      "imageSrc": "projects/recipe.png",
+      "description": "A recipe discovery application that allows users to search for recipes based on ingredients, dietary restrictions, and cuisine types.",
+      "skills": ["React", "API Integration", "CSS", "JavaScript"],
+      "demo": "https://recipe-finder-demo.example.com",
+      "source": "https://github.com/yourusername/recipe-finder"
+    }
+  ]

@@ -66,7 +66,7 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.7 }}
         >
           <motion.a
-            href="mailto:aryamanshumishra@gmail.com"
+            href="#contact"
             className={styles.contactBtn}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
@@ -98,16 +98,16 @@ export const Hero = () => {
               <FiLinkedin />
             </motion.a>
             <motion.a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Resume.pdf"
               className={styles.socialLink}
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Download Resume"
+              download="Aryamanshu_Mishra_Resume.pdf"
             >
               <FiDownload />
             </motion.a>
+
           </div>
         </motion.div>
       </motion.div>

@@ -107,6 +107,8 @@
   position: relative;
 }
 
+
+
 .contactBtn {
   text-decoration: none;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
@@ -145,6 +147,8 @@
 .contactBtn:hover::before {
   left: 100%;
 }
+
+
 
 .socialLinks {
   display: flex;
@@ -374,6 +378,11 @@
   .buttonContainer {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .contactBtn {
+    width: 100%;
+    justify-content: center;
   }
 
   .scrollIndicator {

@@ -8,15 +8,15 @@ const ScrollToTop = () => {
 
   // Show button when page is scrolled down
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    // Show after scrolling down 400px
+    if (window.pageYOffset > 400) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
 
-  // Set the top coordinate to 0
-  // Make scrolling smooth
+  // Scroll to top smoothly
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -32,23 +32,25 @@ const ScrollToTop = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
-          onClick={scrollToTop}
-          className={styles.scrollTop}
-          initial={{ opacity: 0, scale: 0.5, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.5, y: 20 }}
-          transition={{ duration: 0.3 }}
-          whileHover={{ 
-            scale: 1.1, 
-            y: -5,
-            boxShadow: '0 10px 25px rgba(87, 108, 188, 0.4)'
-          }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Scroll to top"
+        <motion.div
+          className={styles.scrollTopContainer}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          <FiArrowUp size={24} />
-        </motion.button>
+          <motion.button
+            onClick={scrollToTop}
+            className={styles.scrollTopButton}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Scroll to top"
+          >
+            <span className={styles.arrowContainer}>
+              <FiArrowUp className={styles.arrowIcon} />
+            </span>
+          </motion.button>
+        </motion.div>
       )}
     </AnimatePresence>
   );

@@ -1,56 +1,108 @@
 @import "../../vars.css";
 
-.scrollTop {
+.scrollTopContainer {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 9999;
+}
+
+.scrollTopButton {
   width: 3.5rem;
   height: 3.5rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: white;
-  border: none;
   border-radius: 50%;
+  background: rgba(11, 36, 71, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
+  overflow: hidden;
 }
 
-.scrollTop::before {
+.scrollTopButton::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.scrollTop:hover::before {
+.scrollTopButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(87, 108, 188, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.scrollTopButton:hover::before {
   opacity: 1;
 }
 
+.arrowContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.arrowIcon {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.scrollTopButton:hover .arrowIcon {
+  transform: translateY(-3px);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.scrollTopContainer {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Media queries */
 @media screen and (max-width: 768px) {
-  .scrollTop {
+  .scrollTopContainer {
+    bottom: 2rem;
+    right: 2rem;
+  }
+  
+  .scrollTopButton {
     width: 3rem;
     height: 3rem;
-    bottom: 1.5rem;
-    right: 1.5rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .scrollTop {
+  .scrollTopContainer {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .scrollTopButton {
     width: 2.75rem;
     height: 2.75rem;
-    bottom: 1.25rem;
-    right: 1.25rem;
+  }
+  
+  .arrowIcon {
+    font-size: 1.25rem;
   }
 }

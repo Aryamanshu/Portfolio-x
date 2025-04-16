@@ -6,6 +6,7 @@ import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Projects } from "./components/Projects/Projects";
 import { Skills } from "./components/Skills/Skills";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { motion } from "framer-motion";
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Projects />
         <Contact />
       </motion.div>
+      {/* Place ScrollToTop outside the motion.div to ensure it's always visible */}
+      <ScrollToTop />
     </div>
   );
 }

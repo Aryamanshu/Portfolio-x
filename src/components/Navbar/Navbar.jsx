@@ -23,7 +23,8 @@ export const Navbar = () => {
 
   const navItems = [
     { title: "About", href: "#about" },
-    { title: "Experience", href: "#experience" },
+    { title: "Education", href: "#education" },
+    { title: "Skills", href: "#skills" },
     { title: "Projects", href: "#projects" },
     { title: "Contact", href: "#contact" },
   ];

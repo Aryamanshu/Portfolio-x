@@ -59,7 +59,7 @@ npm run dev
 
 ## 🌐 Deployment
 
-This site is deployed using GitHub Pages. The live version can be viewed at: [https://aryamanshu.github.io/portfolio](https://portfolio-aryamanshu.netlify.app/)
+This site is deployed using GitHub Pages. The live version can be viewed at: [https://portfolio-aryamanshu.netlify.app/](https://portfolio-aryamanshu.netlify.app/)
 
 ## 📝 License
 

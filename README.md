@@ -71,7 +71,7 @@ Feel free to reach out if you have any questions or just want to connect!
 
 - **Email**: aryamanshumishra@gmail.com
 - **LinkedIn**: [linkedin.com/in/aryamanshu-mishra](https://www.linkedin.com/in/aryamanshu-mishra-0ab5ab247/)
-- **GitHub**: [github.com/Aryamanshu](https://github.com/Aryamanshu)
+- **GitHub**: [github.com/Aryamanshu](portfolio-aryamanshu.netlify.app)
 
 ---
 

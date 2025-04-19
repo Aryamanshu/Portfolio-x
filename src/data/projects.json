@@ -8,6 +8,7 @@
       "skills": ["React", "Node.js", "Express", "MongoDB", "Stability AI API"],
       "demo": "https://arya-ai-image-generator.netlify.app/",
       "source": "https://github.com/Aryamanshu/AI-Image-Generator"
+      
     },
     {
       "id": 2,
@@ -20,12 +21,13 @@
     },
     {
       "id": 3,
-      "title": "Employee Management System",
-      "imageSrc": "projects/ems.png",
-      "description": "A full-stack task management application with user authentication, task categorization, and deadline reminders.",
-      "skills": ["React", "Node.js", "Express", "MongoDB", "JWT"],
-      "demo": "https://ems-by-aryamanshu.netlify.app/",
-      "source": "https://github.com/Aryamanshu/Employee-Management-System-EMS-"
+      "title": "AI-Code-Reviewer",
+      "imageSrc": "projects/code.png",
+      "description": "A web application that allows users to review and rate code snippets.",
+      "skills": ["React", "Node.js", "MongoDB", "Express", "JWT"],
+      "demo": "https://code-rev.netlify.app/",
+      "source": "https://github.com/Aryamanshu/AI-Code-Reviewer"
+      
     },
     {
       "id": 4,
@@ -47,11 +49,22 @@
     },
     {
       "id": 6,
-      "title": "recipe-app",
-      "imageSrc": "projects/recipe.png",
-      "description": "A recipe discovery application that allows users to search for recipes based on ingredients, dietary restrictions, and cuisine types.",
-      "skills": ["React", "API Integration", "CSS", "JavaScript"],
-      "demo": "https://recipe-finder-demo.example.com",
-      "source": "https://github.com/yourusername/recipe-finder"
+      "title": "Employee Management System",
+      "imageSrc": "projects/ems.png",
+      "description": "A full-stack task management application with user authentication, task categorization, and deadline reminders.",
+      "skills": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "demo": "https://ems-by-aryamanshu.netlify.app/",
+      "source": "https://github.com/Aryamanshu/Employee-Management-System-EMS-"
+      
+    },
+    {
+      "id": 7,
+      "title": "TinyHost",
+      "imageSrc": "projects/tiny.png",
+      "description": "A web application that allows users to host their static websites for free.",
+      "skills": ["React", "Node.js", "MongoDB", "Express", "Next.js", "JWT"],
+      "demo": "https://tinyhosts.netlify.app/",
+      "source": "https://github.com/Aryamanshu/LinkShortner"
+      
     }
   ]

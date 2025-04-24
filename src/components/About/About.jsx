@@ -80,8 +80,6 @@ const TypedText = ({ text, delay = 0 }) => {
 
 export const About = () => {
   const ref = React.useRef(null);
-  const imageRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const isInView = useInView(ref, { once: false, amount: 0.3 });
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -93,22 +91,6 @@ export const About = () => {
 
   // Generate particles
   const particles = Array.from({ length: 20 }, (_, i) => i);
-
-  // 3D parallax effect for the image
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (imageRef.current) {
-        const { left, top, width, height } = imageRef.current.getBoundingClientRect();
-        const x = (e.clientX - left) / width - 0.5;
-        const y = (e.clientY - top) / height - 0.5;
-
-        setMousePosition({ x, y });
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   const skills = [
     {
@@ -264,15 +246,11 @@ export const About = () => {
 
       <div className={styles.content}>
         <motion.div
-          ref={imageRef}
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           className={styles.imageContainer}
-          style={{
-            perspective: "1000px"
-          }}
         >
           {/* Animated decorative elements */}
           <motion.div
@@ -327,28 +305,47 @@ export const About = () => {
           <motion.div className={`${styles.imageDecoration} ${styles.decoration1}`} />
           <motion.div className={`${styles.imageDecoration} ${styles.decoration2}`} />
 
-          {/* 3D parallax image */}
-          <motion.div
-            className={styles.image3DContainer}
-            style={{
-              rotateY: mousePosition.x * 20,
-              rotateX: -mousePosition.y * 20,
-              transformStyle: "preserve-3d"
-            }}
-          >
+          {/* Image with clean reveal effect */}
+          <motion.div className={styles.imageWrapper}>
+            <motion.div
+              className={styles.imageRevealMask}
+              initial={{ width: "100%" }}
+              whileInView={{ width: "0%" }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+              viewport={{ once: false }}
+            />
             <motion.img
               src={aboutImage}
               alt="Me sitting with a laptop"
               className={styles.aboutImage}
-              style={{
-                translateZ: "20px"
+              initial={{ scale: 1.1, filter: "blur(5px)" }}
+              whileInView={{
+                scale: 1,
+                filter: "blur(0px)",
+                transition: { duration: 0.8, ease: "easeOut", delay: 0.3 }
               }}
-              whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
-              drag
-              dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-              dragElastic={0.1}
+              whileHover={{
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+                transition: { duration: 0.3 }
+              }}
+              viewport={{ once: false }}
             />
           </motion.div>
+
+          {/* Subtle floating effect for the image */}
+          <motion.div
+            className={styles.imageShadow}
+            animate={{
+              opacity: [0.3, 0.5, 0.3],
+              scale: [1, 1.05, 1],
+              y: [0, -5, 0]
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
 
           {/* Floating badges */}
           <motion.div

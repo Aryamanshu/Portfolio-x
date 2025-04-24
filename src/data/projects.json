@@ -54,7 +54,7 @@
       "imageSrc": "projects/portfolio.png",
       "description": "A modern, responsive portfolio website built with React and Framer Motion to showcase my projects and skills.",
       "skills": ["React", "Framer Motion", "CSS Modules", "Vite"],
-      "demo": "https://aryamanshu.netlify.app/",
+      "demo": "https://portfolio-aryamanshu.netlify.app",
       "source": "https://github.com/Aryamanshu/aryamanshu.github.io"
     },
     {

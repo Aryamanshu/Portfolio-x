@@ -103,7 +103,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Download Resume"
-              download="Aryamanshu_Mishra_Resume.pdf"
+              download="Aryamanshu Mishra Resume.pdf"
             >
               <FiDownload />
             </motion.a>
